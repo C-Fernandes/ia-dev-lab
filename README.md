@@ -30,3 +30,5 @@ Olá, mundo!
 
 - Código de regra de negócio deve ficar em `src/`.
 - Não utilizar bibliotecas externas sem que estejam documentadas.
+
+edição teste

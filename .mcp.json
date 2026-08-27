@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/mariaclara_fo/Documents/Faculdade/Mestrado/Topicos especiais 2 - Jean/ia-dev-lab"
+      ]
+    }
+  }
+}
