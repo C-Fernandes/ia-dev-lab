@@ -1,8 +1,14 @@
 # Especificação: Validador Avançado de CPF/CNPJ
 
+> Este documento é a especificação inicial, escrita à mão antes da adoção de uma
+> ferramenta de SDD. A especificação executada é a do OpenSpec, em
+> [`../openspec/changes/add-validador-documentos/`](../openspec/changes/add-validador-documentos/).
+> O plano de tarefas da seção 4 foi revisado antes de ser executado; as alterações
+> e o motivo de cada uma estão em [`revisao-plano-f1.md`](revisao-plano-f1.md).
+
 ## 1. User Story (Prompt Inicial)
 
-Como desenvolvedor backend do sistema, eu quero uma função robusta em Python para validar números de CPF e CNPJ, de modo que o sistema consiga verificar o formato textual, rejeitar sequências de dígitos repetidos e calcular corretamente os dígitos verificadores oficiais, garantindo a integridade dos dados cadastrais.
+Como responsável pelo cadastro do sistema, eu quero que os números de CPF e CNPJ informados sejam conferidos no momento em que são cadastrados, de modo que o sistema aceite o documento escrito com ou sem pontuação, recuse sequências de dígitos repetidos e recuse documentos cujos dígitos verificadores não confiram, garantindo a integridade dos dados cadastrais.
 
 ## 2. Requisitos Funcionais (PRD)
 
@@ -16,7 +22,7 @@ Como desenvolvedor backend do sistema, eu quero uma função robusta em Python p
 
 ### Cenário 1: Validação de CPF com formato válido
 
-- **Given** que o usuário informa um CPF válido formatado (`"123.456.789-09"` - _exemplo ilustrativo_),
+- **Given** que o usuário informa um CPF válido formatado (`"529.982.247-25"`),
 - **When** a função de validação de CPF é executada,
 - **Then** o retorno deve ser `True`.
 
