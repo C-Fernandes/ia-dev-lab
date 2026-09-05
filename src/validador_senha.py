@@ -3,7 +3,7 @@
 Comportamento especificado em specs/001-validador-senha-forte/spec.md.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
@@ -28,7 +28,7 @@ class PoliticaSenha:
 class ResultadoValidacao:
     """Resposta da avaliação: o que falta, se é que falta algo."""
 
-    pendencias: tuple = field(default=())
+    pendencias: tuple[str, ...] = ()
 
     @property
     def valida(self) -> bool:
@@ -41,7 +41,7 @@ POLITICA_PADRAO = PoliticaSenha()
 class ValidadorSenha:
     """Avalia senhas contra uma política, sem armazenar nem registrar nada."""
 
-    def __init__(self, politica: PoliticaSenha = None):
+    def __init__(self, politica: "PoliticaSenha | None" = None):
         self.politica = politica if politica is not None else POLITICA_PADRAO
 
     @staticmethod
