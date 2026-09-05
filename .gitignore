@@ -1,0 +1,7 @@
+# Configuração local de agentes de IA (regenerável por `openspec init` e `specify init`)
+.claude/
+
+# Artefatos de execução do Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
