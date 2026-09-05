@@ -14,7 +14,7 @@ O primeiro plano, em [`especificacao-cpf-cnpj.md`](especificacao-cpf-cnpj.md), t
 
 ## Plano revisado
 
-O plano aplicado é o de [`../openspec/changes/add-validador-documentos/tasks.md`](../openspec/changes/add-validador-documentos/tasks.md): 4 grupos, 10 tarefas.
+O plano aplicado é o de [`../openspec/changes/archive/2026-09-04-add-validador-documentos/tasks.md`](../openspec/changes/archive/2026-09-04-add-validador-documentos/tasks.md): 4 grupos, 10 tarefas.
 
 ## Alterações e justificativas
 

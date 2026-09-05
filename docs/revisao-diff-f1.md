@@ -20,7 +20,7 @@ O limiar funcionava por acaso nos exemplos da lista, todos com máscara: `"11.22
 
 ## Por que os testes não pegariam
 
-Os 27 testes passam, antes e depois de encontrado o problema. Eles chamam `validar_cpf` e `validar_cnpj` diretamente, que é o contrato descrito no spec. O bloco `if __name__ == "__main__"` não é importado por nenhum teste e não faz parte desse contrato.
+Os 17 testes da funcionalidade passam, antes e depois de encontrado o problema. Eles chamam `validar_cpf` e `validar_cnpj` diretamente, que é o contrato descrito no spec. O bloco `if __name__ == "__main__"` não é importado por nenhum teste e não faz parte desse contrato.
 
 ## Observação
 

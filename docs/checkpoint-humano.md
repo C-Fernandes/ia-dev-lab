@@ -23,7 +23,7 @@ A funcionalidade implementa regra externa ao projeto (algoritmo da Receita Feder
 
 ## Simulação do checkpoint
 
-**Momento:** depois da implementação completa, com 27 testes passando e `openspec validate --strict` limpo, antes de abrir o Pull Request.
+**Momento:** depois da implementação completa, com os 17 testes da funcionalidade passando (27 no repositório inteiro, contando os 10 de e-mail já existentes) e `openspec validate --strict` limpo, antes de abrir o Pull Request.
 
 **Itens revisados:**
 

@@ -2,7 +2,8 @@
 
 > Este documento é a especificação inicial, escrita à mão antes da adoção de uma
 > ferramenta de SDD. A especificação executada é a do OpenSpec, em
-> [`../openspec/changes/add-validador-documentos/`](../openspec/changes/add-validador-documentos/).
+> [`../openspec/changes/archive/2026-09-04-add-validador-documentos/`](../openspec/changes/archive/2026-09-04-add-validador-documentos/), já arquivada, com os requisitos promovidos para
+> [`../openspec/specs/validacao-documentos/spec.md`](../openspec/specs/validacao-documentos/spec.md).
 > O plano de tarefas da seção 4 foi revisado antes de ser executado; as alterações
 > e o motivo de cada uma estão em [`revisao-plano-f1.md`](revisao-plano-f1.md).
 

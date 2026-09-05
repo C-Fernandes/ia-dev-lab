@@ -6,9 +6,9 @@ Referente às tarefas 15 e 16.
 |---|---|---|
 | Funcionalidade | Validador de CPF/CNPJ | Validador de senha forte |
 | Ferramenta | OpenSpec 1.12.0 | SpecKit (github/spec-kit) |
-| Artefatos | `openspec/changes/add-validador-documentos/` | `specs/001-validador-senha-forte/` e `.specify/memory/` |
+| Artefatos | `openspec/changes/archive/2026-09-04-add-validador-documentos/` e `openspec/specs/validacao-documentos/` | `specs/001-validador-senha-forte/` e `.specify/memory/` |
 | Código | `src/validador_documentos.py` | `src/validador_senha.py` |
-| Testes | 27 | 17 |
+| Testes | 17 | 17 |
 
 ## 1. Artefatos gerados
 
@@ -22,7 +22,7 @@ Também oferece `research.md`, `data-model.md`, `contracts/` e `quickstart.md`. 
 
 ## 2. Diferenças de abordagem
 
-**Escopo do que se escreve.** No OpenSpec, o artefato é um delta (`## ADDED Requirements`) sobre o conjunto de specs existente. Ao rodar `openspec archive`, o delta é promovido para `openspec/specs/` e vira a especificação do projeto. No SpecKit, cada funcionalidade tem uma pasta numerada independente, sem acúmulo entre elas.
+**Escopo do que se escreve.** No OpenSpec, o artefato é um delta (`## ADDED Requirements`) sobre o conjunto de specs existente. Ao rodar `openspec archive`, o delta é promovido para `openspec/specs/` e vira a especificação do projeto. Foi o que se fez ao fim da atividade: a change saiu de `openspec/changes/` para `openspec/changes/archive/2026-09-04-add-validador-documentos/` e os cinco requisitos passaram a viver em `openspec/specs/validacao-documentos/spec.md`, agora independentes da change que os originou. No SpecKit, cada funcionalidade tem uma pasta numerada independente, sem acúmulo entre elas.
 
 **Validação.** `openspec validate --strict` recusa change sem delta, requisito sem cenário e cenário escrito com 3 `#` em vez de 4. Ao traduzir os cabeçalhos para o português, o comando falhou com `No delta sections found`, o que mostrou quais títulos são estruturais. O SpecKit não tem comando equivalente: os templates vêm com marcadores `[NEEDS CLARIFICATION]` e nada impede entregá-los preenchidos pela metade.
 
