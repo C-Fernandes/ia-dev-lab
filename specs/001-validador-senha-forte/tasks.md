@@ -21,31 +21,31 @@ description: "Plano de tarefas do validador de senha forte"
 
 **Objetivo**: fixar o comportamento esperado antes de existir código que o justifique.
 
-- [ ] T001 [US1] Criar `tests/test_validador_senha.py` com os três cenários de aceite da História 1 (senha `"abc"` com quatro pendências, `"Abc@1234"` válida, `"abcdefgh"` sem pendência de comprimento) e verificar que a suíte falha por `ImportError`
-- [ ] T002 [US2] Acrescentar os três cenários de aceite da História 2 (comprimento mínimo 12, política sem caractere especial, política sem critérios) e verificar que continuam falhando pelo mesmo motivo
-- [ ] T003 [US3] Acrescentar os três cenários de aceite da História 3 (`TypeError` para `int` e `None`, `ValueError` para comprimento mínimo negativo) e verificar que continuam falhando pelo mesmo motivo
-- [ ] T004 Acrescentar os seis casos de borda da spec (senha vazia, só espaços, exatamente no mínimo, com acento, muito longa, critério satisfeito duas vezes) e verificar que o total de testes coletados cobre todos os cenários e casos de borda especificados
+- [x] T001 [US1] Criar `tests/test_validador_senha.py` com os três cenários de aceite da História 1 (senha `"abc"` com quatro pendências, `"Abc@1234"` válida, `"abcdefgh"` sem pendência de comprimento) e verificar que a suíte falha por `ImportError`
+- [x] T002 [US2] Acrescentar os três cenários de aceite da História 2 (comprimento mínimo 12, política sem caractere especial, política sem critérios) e verificar que continuam falhando pelo mesmo motivo
+- [x] T003 [US3] Acrescentar os três cenários de aceite da História 3 (`TypeError` para `int` e `None`, `ValueError` para comprimento mínimo negativo) e verificar que continuam falhando pelo mesmo motivo
+- [x] T004 Acrescentar os seis casos de borda da spec (senha vazia, só espaços, exatamente no mínimo, com acento, muito longa, critério satisfeito duas vezes) e verificar que o total de testes coletados cobre todos os cenários e casos de borda especificados
 
 ## Fase 2: Implementação
 
 **Objetivo**: fazer a suíte passar, sem antecipar nada que a spec não peça.
 
-- [ ] T005 Criar `src/validador_senha.py` com a dataclass congelada `PoliticaSenha` (comprimento mínimo e quatro sinalizadores de composição) e o `__post_init__` que levanta `ValueError` para comprimento negativo, verificando pelos testes de T003
-- [ ] T006 [P] Implementar a dataclass `ResultadoValidacao` com `pendencias` imutável e `valida` derivada de a lista estar vazia, verificando que nenhum caminho consegue produzir resultado válido com pendências
-- [ ] T007 Implementar a checagem de comprimento mínimo, com a mensagem interpolando o valor exigido pela política, verificando pelos cenários de T001 e do comprimento 12 em T002
-- [ ] T008 Implementar as checagens de maiúscula, minúscula e dígito, verificando pelos cenários da História 1
-- [ ] T009 Implementar a checagem de caractere especial por exclusão (não é `isalnum()` nem `isspace()`), verificando pelos casos de borda do acento e da senha só de espaços em T004
-- [ ] T010 Implementar a função pública de validação, que levanta `TypeError` para entrada não-`str` e avalia todos os critérios sem interromper na primeira falha, verificando que os cenários de T003 passam e que uma senha com três violações devolve três pendências
-- [ ] T011 [P] Adicionar a política padrão de 8 caracteres com os quatro critérios ativos, verificando que a validação funciona sem configuração explícita
+- [x] T005 Criar `src/validador_senha.py` com a dataclass congelada `PoliticaSenha` (comprimento mínimo e quatro sinalizadores de composição) e o `__post_init__` que levanta `ValueError` para comprimento negativo, verificando pelos testes de T003
+- [x] T006 [P] Implementar a dataclass `ResultadoValidacao` com `pendencias` imutável e `valida` derivada de a lista estar vazia, verificando que nenhum caminho consegue produzir resultado válido com pendências
+- [x] T007 Implementar a checagem de comprimento mínimo, com a mensagem interpolando o valor exigido pela política, verificando pelos cenários de T001 e do comprimento 12 em T002
+- [x] T008 Implementar as checagens de maiúscula, minúscula e dígito, verificando pelos cenários da História 1
+- [x] T009 Implementar a checagem de caractere especial por exclusão (não é `isalnum()` nem `isspace()`), verificando pelos casos de borda do acento e da senha só de espaços em T004
+- [x] T010 Implementar a função pública de validação, que levanta `TypeError` para entrada não-`str` e avalia todos os critérios sem interromper na primeira falha, verificando que os cenários de T003 passam e que uma senha com três violações devolve três pendências
+- [x] T011 [P] Adicionar a política padrão de 8 caracteres com os quatro critérios ativos, verificando que a validação funciona sem configuração explícita
 
 ## Fase 3: Verificação
 
-- [ ] T012 Rodar `python3 -m pytest -q` e verificar que a suíte inteira do repositório passa, incluindo os testes de e-mail e de CPF/CNPJ
+- [x] T012 Rodar `python3 -m pytest -q` e verificar que a suíte inteira do repositório passa, incluindo os testes de e-mail e de CPF/CNPJ
 
 ## Fase 4: Revisão
 
-- [ ] T013 Revisar o `git diff` da implementação antes de aceitar e registrar o achado
-- [ ] T014 Passar pelo checkpoint humano de `docs/checkpoint-humano.md` antes de abrir o Pull Request
+- [x] T013 Revisar o `git diff` da implementação antes de aceitar e registrar o achado
+- [x] T014 Passar pelo checkpoint humano de `docs/checkpoint-humano.md` antes de abrir o Pull Request
 
 ## Dependências
 

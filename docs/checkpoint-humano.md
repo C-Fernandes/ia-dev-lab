@@ -38,6 +38,20 @@ Os itens 1 a 3 passaram. O item 4 não: o bloco escolhia a validação por `len(
 
 A correção foi feita antes do merge, em commit próprio e não em amend, para que o histórico mostre que o checkpoint pegou o problema. Aprovação concedida depois disso.
 
+## Segunda simulação (Funcionalidade 2)
+
+**Momento:** depois da implementação do validador de senha, com 44 testes passando no repositório inteiro, antes do Pull Request.
+
+**Itens revisados:**
+
+1. Os cinco critérios de composição, conferidos contra os requisitos FR-001 a FR-010 do spec. Corretos.
+2. A definição de caractere especial por exclusão (`isalnum()` e `isspace()`), conferida contra os casos de borda do acento e dos espaços. Correta.
+3. As assinaturas de tipo, conferidas contra o `plan.md`.
+
+**Decisão: editar antes de aprovar.**
+
+Os itens 1 e 2 passaram. O item 3 não: a anotação `politica: PoliticaSenha = None` contradiz o próprio valor padrão, e `pendencias: tuple` perdeu a precisão `tuple[str, ...]` que o plano definia. Detalhes em [`revisao-diff-f2.md`](revisao-diff-f2.md). Correção em commit próprio, antes do merge.
+
 ## Conclusão
 
 O erro estava fora da spec, não dentro dela. Os testes cobriam tudo o que a especificação descrevia e continuaram passando durante o problema. Especificar antes reduz o espaço de erro, mas o código que ninguém especificou também é o código que ninguém testa. Por isso o checkpoint permanece obrigatório.
