@@ -53,12 +53,13 @@ class ValidadorDocumentos:
 
 
 if __name__ == "__main__":
-    exemplos = [
-        "529.982.247-25",
-        "111.111.111-11",
-        "11.222.333/0001-81",
-        "12.345.678/0001-99",
-    ]
-    for e in exemplos:
-        metodo = ValidadorDocumentos.validar_cpf if len(e) <= 14 else ValidadorDocumentos.validar_cnpj
-        print(f"{e!r}: {metodo(e)}")
+    # O tipo de documento e escolhido explicitamente: inferir pelo tamanho da
+    # string roteia um CNPJ sem mascara (14 caracteres) para validar_cpf.
+    exemplos_cpf = ["529.982.247-25", "52998224725", "111.111.111-11"]
+    exemplos_cnpj = ["11.222.333/0001-81", "11222333000181", "12.345.678/0001-99"]
+
+    for documento in exemplos_cpf:
+        print(f"CPF  {documento!r}: {ValidadorDocumentos.validar_cpf(documento)}")
+
+    for documento in exemplos_cnpj:
+        print(f"CNPJ {documento!r}: {ValidadorDocumentos.validar_cnpj(documento)}")
