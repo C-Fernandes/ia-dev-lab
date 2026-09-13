@@ -9,3 +9,4 @@ Linhas em branco e iniciadas com `#` são ignoradas.
 ## Aprovadas
 
 pytest
+tdd-guard-pytest
