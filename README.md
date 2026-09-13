@@ -26,6 +26,10 @@ Saída esperada:
 Olá, mundo!
 ```
 
+## Validadores
+
+- `validador_ipv4`
+
 ## Convenções
 
 - Código de regra de negócio deve ficar em `src/`.
