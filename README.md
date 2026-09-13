@@ -33,6 +33,7 @@ Olá, mundo!
 - `validador_placa`
 - `validador_cartao_credito`
 - `validador_hora`
+- `validador_ipv4`
 
 ## Convenções
 
