@@ -10,3 +10,7 @@ Linhas em branco e iniciadas com `#` são ignoradas.
 
 pytest
 tdd-guard-pytest
+
+# fpdf2: ferramenta pontual para gerar o PDF de entrega do relatorio final,
+# nao e dependencia do codigo em src/
+fpdf2
