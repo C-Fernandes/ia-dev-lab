@@ -34,6 +34,7 @@ Olá, mundo!
 - `validador_cartao_credito`
 - `validador_hora`
 - `validador_ipv4`
+- `validador_cor_hex`
 
 ## Convenções
 
