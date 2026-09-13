@@ -16,15 +16,13 @@ def validar_cartao_credito(numero: str) -> bool:
         return False
 
     soma = 0
-    dobrar = False
-    for digito in reversed(digitos):
+    for posicao, digito in enumerate(reversed(digitos)):
         valor = int(digito)
-        if dobrar:
+        if posicao % 2 == 1:
             valor *= 2
             if valor > 9:
                 valor -= 9
         soma += valor
-        dobrar = not dobrar
 
     return soma % 10 == 0
 
