@@ -26,6 +26,14 @@ Saída esperada:
 Olá, mundo!
 ```
 
+## Validadores
+
+- `validador_email` / `validador_email_simples`
+- `validador_cep`
+- `validador_placa`
+- `validador_cartao_credito`
+- `validador_hora`
+
 ## Convenções
 
 - Código de regra de negócio deve ficar em `src/`.
